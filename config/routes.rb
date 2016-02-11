@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'statuses', to: 'statuses#index', page: 1
+
+  get 'statuses/page/:age', to: 'statuses#index'
   get 'statuses/index'
 
   get 'statuses/show'
